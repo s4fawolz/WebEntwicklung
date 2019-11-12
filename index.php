@@ -2,9 +2,7 @@
 ?>
 <html>
 <body>
-Swag Lololo
-Was
-
+Hallo 
 Was geht
 </body>
 </html>
