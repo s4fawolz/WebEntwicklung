@@ -1,0 +1,27 @@
+body
+{
+    background-color: lightslategrey;
+    color: yellow;
+}
+.list
+{
+    text-align: center;
+    border: 2px dotted black;
+    background-color: lightcoral;
+    list-style-position: inside;
+    width: 25%;
+    margin: 20px;
+    float: left;
+}
+.list > ul
+{
+    list-style: none;
+}
+header
+{
+    text-align: center;
+}
+nav
+{
+    float: left ;
+}

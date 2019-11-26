@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang=de:DE>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" type="text/css" href="\Uebung_HTML-CSS\css\Ue2A4.css">-->
+    <title>Aufgaben</title>
+</head>
+<body>
+<div class="container-fluid">
+    <header class="jumbotron"><h1>Aufgabenplaner</h1></header>
+    <div class = "row">
+        <div class="col-2">
+            <nav>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="Login.html">Login</a></li>
+                    <li class="list-group-item"><a href="Projekte.html">Projekte</a></li>
+                    <li class="list-group-item"><a href="AktuellesProjekt.html">Aktuelles Projekt</a></li>
+                    <ul>
+                        <li class="list-group-item"><a href="Reiter.html">Reiter</a></li>
+                        <li class="list-group-item"><a href="Aufgaben.html">Aufgaben</a></li>
+                        <li class="list-group-item"><a href=Mitglieder.html>Mitglieder</a></li>
+                    </ul>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="col">
+            <form>
+                <div class="form-group">
+                    <label for="aufgabenBez">Bezeichnung der Aufgabe</label>
+                    <input class="form-control" type="text" name="Name" id="aufgabenBez" placeholder="Bezeichnug">
+                </div>
+                <div class="form-group">
+                    <label for="tArea1">Beschreibung der Aufgabe:</label>
+                    <textarea placeholder="Beschreibung" class="form-control"  id="tArea1" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="erstellung">Erstellt am:</label>
+                    <input name="Erstellt am"class="form-control" type="date" name="Name" id="erstellung" placeholder="Erstellt am">
+                </div>
+                <div class="form-group">
+                    <label for="faelligkeit">Fällig bis:</label>
+                    <input name="Fällig bis"class="form-control" type="date" name="Name" id="faelligkeit" placeholder="Fällig bis">
+                </div>
+                <div class="form-group">
+                    <label for="zugehörigesProjekt">Zugehöriges Projekt:</label>
+                    <select name="list" class="form-control" id="zugehörigesProjekt">
+                        <option>Aktuelles Projekt</option>
+                        <option>Aufgaben</option>
+                        <option>Reiter</option>
+                        <option>Projekte</option>
+                        <option>Aufgaben</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zugehörigerReiter">Zugehöriger Reiter:</label>
+                    <select name=list" class="form-control" id="zugehörigerReiter">
+                        <option>ToDo</option>
+                        <option>Erledigt</option>
+                        <option>Verschoben</option>
+                    </select>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Mitbewohner1" id="pers1">
+                    <label class="form-check-label" for="pers1">
+                        Mitbewohner1
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Mitbewohner2" id="pers2">
+                    <label class="form-check-label" for="pers2">
+                        Mitbewohner2
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

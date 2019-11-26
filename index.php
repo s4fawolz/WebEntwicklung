@@ -2,7 +2,7 @@
 ?>
 <html>
 <body>
-Hallo 
+Hallo
 Was geht
 </body>
 </html>
