@@ -27,6 +27,18 @@
         </div>
 
         <div class="col">
+            <h2>Projekt Auswählen</h2>
+            <form>
+                <div class="form-group">
+                    <select name="list "class="form-control" id="projektAuswahl">
+                        <option>ToDo-Liste</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" style="margin-bottom: 10px;">Submit</button>
+                <button type="button" class="btn btn-primary" style="margin-bottom: 10px;">Bearbeiten</button>
+                <button type="button" class="btn btn-danger" style="margin-bottom: 10px;">Löschen</button>
+            </form>
+            <h2>Beabeiten/Erstellen</h2>
             <form>
                 <div class="form-group">
                     <label for="projektname">Projektname</label>
@@ -36,7 +48,9 @@
                     <label for="tArea1">Projektbeschreibung:</label>
                     <textarea class="form-control" placeholder="Beschreibung" id="tArea1" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+                <button type="button" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-info">Reset</button>
             </form>
         </div>
     </div>
