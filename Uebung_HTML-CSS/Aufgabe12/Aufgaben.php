@@ -1,12 +1,8 @@
 <?php
 require "db_config.php";
-
-
-//sql fragt alle Mitglieder, die am ausgewählten Projekt beteiligt sind an
 $sql = "SELECT * FROM `Aufgaben` a , `Reiter` r WHERE a.ReiterID = r.ReiterID ";
 $result = $conn->query($sql);
 $mitarbeiter = $result->fetch_all(MYSQLI_ASSOC);
-var_dump($mitarbeiter);
 
 ?>
 <!doctype html>

@@ -4,8 +4,6 @@ require "db_config.php";
 $sql = "SELECT * FROM `Mitglieder` WHERE `ID` =".$_GET["delID"];
 $result = $conn->query($sql);
 $mitarbeiter = $result->fetch_all(MYSQLI_ASSOC)[0];
-var_dump($mitarbeiter);
-echo $_SESSION["userEmail"];
 $isLoggedInUser = $_SESSION["userEmail"] == $mitarbeiter["EMail"];
 $passwort = $isLoggedInUser ? $mitarbeiter["Passwort"] : "";
 $_SESSION["changeUserID"] = $_GET["delID"];

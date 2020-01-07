@@ -1,5 +1,10 @@
 
-
+<?php
+require "db_config.php";
+$sql = "SELECT * FROM `Aufgaben` a , `Reiter` r WHERE a.ReiterID = r.ReiterID ";
+$result = $conn->query($sql);
+$aufgaben = $result->fetch_all(MYSQLI_ASSOC);
+?>
 <!doctype html>
 <html lang=de:DE>
 <head>
@@ -23,21 +28,43 @@
                 <div class="col">
                     <p class="card-header"><b>ToDo:</b></p>
                     <ul class="list-group">
-                        <li class="list-group-item">HTML Datei erstellen</li>
-                        <li class="list-group-item">CSS Datei erstellen</li>
+                    <?php
+                        foreach ($aufgaben as $aufgabe)
+                        {
+                            if($aufgabe["ReiterID"] == 1)
+                            {
+                                echo '<li class="list-group-item">'.$aufgabe['Name'].'</li>';
+                            }
+                        }
+                        ?>
                     </ul>
                 </div>
                 <div class="col">
                     <p class="card-header"><b>Erledigt:</b></p>
                     <ul class="list-group">
-                        <li class="list-group-item">PC eingeschaltet</li>
-                        <li class="list-group-item"> Kaffee trinken</li>
+                        <?php
+                        foreach ($aufgaben as $aufgabe)
+                        {
+                            if($aufgabe["ReiterID"] == 2)
+                            {
+                                echo '<li class="list-group-item">'.$aufgabe['Name'].'</li>';
+                            }
+                        }
+                        ?>
                     </ul>
                 </div>
                 <div class="col">
                     <p class="card-header"><b>Verschieben</b></p>
                     <ul class="list-group">
-                        <li class="list-group-item">Für die Uni lernen</li>
+                        <?php
+                        foreach ($aufgaben as $aufgabe)
+                        {
+                            if($aufgabe["ReiterID"] == 3)
+                            {
+                                echo '<li class="list-group-item">'.$aufgabe['Name'].'</li>';
+                            }
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

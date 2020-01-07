@@ -10,6 +10,7 @@ if($_POST["createUser"] == "true")
 {
     $sql = "INSERT INTO `Mitglieder`(`Username`, `EMail`, `Passwort`) VALUES ('".$_POST['newUsername']."','".$_POST['newUserEmail']."','".password_hash($_POST['newUserPasswort'],PASSWORD_BCRYPT)."')";
     $conn->query($sql);
+
     header("Location: ../Mitglieder.php");
 }
 

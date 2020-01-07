@@ -1,9 +1,18 @@
 <?php
 require "db_config.php";
+session_start();
 
 
-//sql fragt alle Mitglieder, die am ausgewählten Projekt beteiligt sind an
-$sql = "SELECT * FROM `Mitglieder`";
+if(isset($_SESSION["loginstatus"] ) && $_SESSION["loginstatus"] == true)
+{
+    $projekt = $_SESSION["projekt"];
+    $sql ="SELECT * 
+                FROM Mitglieder m, projekte p, Projekte_Mitglieder pm
+                WHERE '$projekt' = p.Name and p.ID = pm.ProjektID and m.ID = pm.MitgliedsID";
+}else
+    $sql = "SELECT * FROM `Mitglieder`";
+
+
 $result = $conn->query($sql);
 $mitarbeiter = $result->fetch_all(MYSQLI_ASSOC);
 ?>
@@ -64,7 +73,7 @@ $mitarbeiter = $result->fetch_all(MYSQLI_ASSOC);
                     <input class="form-control" type="password" name="newUserPasswort" id="passwort" placeholder="Passwort">
                 </div>
                 <div class="form-check" style="margin-bottom: 10px">
-                    <input class="form-check-input" type="checkbox" value="true" id="checkB">
+                    <input class="form-check-input" type="checkbox" name="applyProject" value="true" id="checkB">
                     <label class="form-check-label" for="checkB">
                         Dem Projekt zugeordnet
                     </label>

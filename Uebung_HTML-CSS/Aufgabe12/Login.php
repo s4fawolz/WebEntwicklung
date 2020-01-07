@@ -1,3 +1,7 @@
+<?php
+if(isset($_GET["error"]) && $_GET["error"] == true)
+    echo "Email existiert nicht oder Passwort ist falsch"
+?>
 <!doctype html>
 <html lang=de:DE>
 <head>
